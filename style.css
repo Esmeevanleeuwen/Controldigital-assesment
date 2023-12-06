@@ -1,0 +1,293 @@
+/* Variabelen voor kleuren */
+:root {
+    --background-color: #f8f6f6;
+    --top-bar-background: #b7b7b7;
+    --top-bar-color: #000000;
+    --text-color: #333;
+    --text-light: #666;
+    --accent-color: #ff8080;
+    --button-shadow: 15px 18px 30px rgba(0, 0, 0, 0.1);
+    --modal-background: rgba(0,0,0,0.4);
+    --modal-content-background: #f8f6f6;
+    --input-border: #ccc;
+    --hover-color: #e66767;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.top-bar {
+    background-color: var(--top-bar-background);
+    color: var(--top-bar-color);
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.contact-info {
+    text-align: right;
+    padding-right: 5%;
+}
+
+header {
+    background: var(--background-color);
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    padding-top: 20px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav a {
+    margin-right: 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.quote-btn {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 11px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: var(--button-shadow);
+}
+
+/* Modal stijlen */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--modal-background);
+    transition: opacity 0.5s, background-color 0.5s;
+}
+  
+.modal-content {
+    background-color: var(--modal-content-background);
+    margin: 10% auto;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    width: 40%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+}
+  
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--accent-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Formulier stijlen */
+#quoteForm h2 {
+    color: var(--text-color);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+  
+#quoteForm label {
+    display: block;
+    color: var(--text-light);
+    margin-bottom: 5px;
+}
+
+#quoteForm input[type="text"],
+#quoteForm input[type="email"],
+#quoteForm textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.01);
+    background-color: #fff;
+    outline: none;
+}
+  
+#quoteForm textarea {
+    height: 100px;
+}
+  
+#quoteForm input[type="submit"] {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+  
+#quoteForm input[type="submit"]:hover {
+    background-color: var(--hover-color);
+}
+
+/* Overige stijlen */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10%;
+    background-color: var(--background-color);
+    height: 75vh;
+}
+
+.text-content {
+    max-width: 600px;
+}
+
+.text-content h1 {
+    font-size: 65px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.text-content h1 .accent {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.text-content p {
+    color: var(--text-light);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 25px 18px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.search-bar input[type="text"] {
+    flex-grow: 1;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    transition: background 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: var(--hover-color);
+}
+
+.search-bar .search-button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar .bi-search {
+    margin-left: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.images {
+    position: relative;
+    width: 750px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.images img {
+    border-radius: 50%;
+    position: absolute;
+}
+
+.small-circle {
+    z-index: 3;
+    width: 250px;
+    height: 250px;
+    top: 50%;
+    left: 55%;
+    transform: translate(-120%, 20%);
+}
+
+.large-circle {
+    z-index: 2;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+

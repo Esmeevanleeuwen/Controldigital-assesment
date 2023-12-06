@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verhuisbedrijf</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="contact-info">
+            +31 0123 456 789  info@domein.com
+        </div>
+    </div>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="https://accessibility.huit.harvard.edu/sites/hwpi.harvard.edu/files/styles/os_files_xxlarge/public/online-accessibility-huit/files/icon_image_png_01.png?m=1635123527&itok=UvAUjGCE" alt="Logo" class="logo">
+                <p class="logo-text">Logobrand</p>
+            </div>
+            <nav>
+                <a href="#" class="bold">Moving Services</a>
+                <a href="#" class="bold">Corporate</a>
+                <a href="#" class="bold">Storage</a>
+                <a href="#" class="bold">Quality</a>
+                <a href="#" class="bold">About Us</a>
+            </nav>
+            <button class="quote-btn bold" id="openModal">Get a quote</button>
+            <div id="quoteModal" class="modal">
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <form id="quoteForm">
+                    <h2>Request a Quote</h2>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+            
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+            
+                    <label for="details">Details:</label>
+                    <textarea id="details" name="details" required></textarea>
+            
+                    <input type="submit" value="Submit">
+                </form>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    
+
+    <main>
+        <section class="hero">
+            <div class="text-content">
+                <h1>Worldwide <span class="accent">moving</span> with the utmost care<span class="accent">.</span></h1>
+                <p>Tell us where you are moving to, we will get you there safely and swiftly.</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Where are you going to move?">
+                    <button type="button">
+                        Search
+                        <i class="bi bi-search"></i> <!-- Bootstrap icoon toegevoegd binnen de knop -->
+                    </button>
+                </div>
+            </div>
+            <div class="images">
+                <img src="images-small.png" alt="Family Packing" class="small-circle">
+                <img src="image-big.png" alt="Moving Boxes" class="large-circle">
+            </div>
+        </section>
+    </main>
+ 
+</body>
+<script src="script.js"> </script>
+</html>
